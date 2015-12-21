@@ -1,0 +1,45 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.79.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 2af763a5116a8c87a64428d569bfaaede2bfadaa AUTHOR_PLEDGE
+SHA1 9a812fe29bc93b52667932a46c5f7246a95e4fd3 CONTRIBUTORS
+SHA1 28a3337fe8f840d6bf5ea52869ee8f8d5747af92 Changes
+SHA1 03aac3c82fffba41271df679177033d8eb36b274 INSTALL
+SHA1 5b807b764a3d24ce4f99fc96878cfe82bcc03288 LICENSE
+SHA1 a719b46785045ecf060ef8a7ab5ddeb609683cb5 MANIFEST
+SHA1 cded78543e1256bd6d9ddc31399bfc6aacfc2670 META.json
+SHA1 32b0a175eb3bc3ba80468a22a703e5f1c89e3293 META.yml
+SHA1 33aa2bda71e158be1db80c3b53d7d6203eae0611 Makefile.PL
+SHA1 b2c90689365f04a3eb7d4137e50a9512cbea5dcb README
+SHA1 7bee1656188bef2133f27167c07d77df6301dc02 README.mkdn
+SHA1 16d321d9588cd840c51be772090ad060894d8f0d cpanfile
+SHA1 2962da6eb975631477519bd74c07ddfb49ce7c70 doap.xml
+SHA1 1c527f4e2b78257f273f6345552fb1a6f29ba0b9 lib/MooseX/Storage/Base/SerializedClass.pm
+SHA1 14d24bc336cd5ba595f6a0eb2132e4badbf5f496 lib/MooseX/Storage/Engine/Trait/WithRoles.pm
+SHA1 7f9c309bf14476945e4a192548504a44e4f50a8f lib/MooseX/Storage/Traits/WithRoles.pm
+SHA1 3ece890e1ef85939d3b1de0be231be58b071b6d6 t/00-compile.t
+SHA1 c96a9d6edaec40be5cb0cda6102f9411753f4ec6 t/00-report-prereqs.dd
+SHA1 504a672015f8761f5bad3863d844954c9e803c3f t/00-report-prereqs.t
+SHA1 d07eca6ab9ed21acab98950294585cb55f50cdb5 t/pack-roles.t
+SHA1 80ab1faf5d8174920b60461bf8c11e2225861f42 xt/release/pause-permissions.t
+SHA1 d1fe7d94b3edc7847eb187d4ee41f66e19cf8907 xt/release/unused-vars.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iEYEARECAAYFAlZ4jxQACgkQ34Hwf+GwC4xZ6ACfeAyaX9FCIvGMUzKIDmyYta/y
+sAYAoN2xt9OlB5AXh9u/EpcLyzTf+B8j
+=RCIq
+-----END PGP SIGNATURE-----
