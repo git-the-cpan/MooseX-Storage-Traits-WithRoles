@@ -42,3 +42,6 @@ DESCRIPTION
     MooseX::Storage::Base::SerializedClass, unpack() will reinflate the
     data in the right class augmented by the given roles.
 
+    Oh yeah, and the trait also works with MooseX::Role::Parameterized
+    roles. You're welcome, Sartak. ;-)
+

@@ -4,7 +4,7 @@ MooseX::Storage::Traits::WithRoles - A custom trait to include roles in serializ
 
 # VERSION
 
-version 0.0.1
+version 0.1.0
 
 # SYNOPSIS
 
@@ -47,6 +47,9 @@ When this trait is used, the serialized `__CLASS__` value will be the base
 class, and `__ROLES__` will contain the list of roles that it consumes. If used
 in conjecture with [MooseX::Storage::Base::SerializedClass](https://metacpan.org/pod/MooseX::Storage::Base::SerializedClass), `unpack()` will reinflate the data
 in the right class augmented by the given roles.
+
+Oh yeah, and the trait also works with [MooseX::Role::Parameterized](https://metacpan.org/pod/MooseX::Role::Parameterized) roles. You're
+welcome, Sartak. ;-)
 
 # AUTHOR
 

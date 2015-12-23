@@ -1,10 +1,15 @@
 package MooseX::Storage::Engine::Trait::WithRoles;
 our $AUTHORITY = 'cpan:YANICK';
 # ABSTRACT: An engine trait to include roles in serialization
-$MooseX::Storage::Engine::Trait::WithRoles::VERSION = '0.0.1';
+$MooseX::Storage::Engine::Trait::WithRoles::VERSION = '0.1.0';
 use Moose::Util qw/ with_traits /;
 
+use List::Util qw/ pairgrep /;
+
 use Moose::Role;
+use MooseX::Storage::Base::SerializedClass;
+use List::MoreUtils qw/ apply /;
+
 use namespace::autoclean;
 
 around collapse_object => sub {
@@ -13,29 +18,26 @@ around collapse_object => sub {
     my $packed = $orig->( $self, @args );
 
     if( my @roles = map { $_->name } @{ $self->object->meta->roles } ) {
-        $packed->{'__ROLES__'} = \@roles;
+        $packed->{'__ROLES__'} = [
+            apply { 
+                $_ = { $_->meta->genitor->name => { pairgrep { $a ne '<<MOP>>' }  %{ $_->meta->parameters } } }
+                    if $_->meta->isa('MooseX::Role::Parameterized::Meta::Role::Parameterized') 
+            } @roles
+        ];
     }
 
-    if ( $self->object->meta->is_anon_class ) {
-        $packed->{'__CLASS__'} = ( $self->object->meta->superclasses )[0];
-    }
+    ( $packed->{'__CLASS__'} ) = $self->object->meta->superclasses
+        if $self->object->meta->is_anon_class;
 
-    $packed;
-
+    return $packed;
 };
 
 around expand_object => sub {
     my( $orig, $self, $data, @args ) = @_;
 
-    if( my $roles = delete $data->{'__ROLES__'} ) {
-        my $class_with_roles = with_traits(
-            $data->{'__CLASS__'},
-            @$roles,
-        );
-        $data->{'__CLASS__'} = $class_with_roles;
-        warn $class_with_roles;
-        $self->class($class_with_roles);
-    }
+    $self->class(
+        MooseX::Storage::Base::SerializedClass::_unpack_class($data)
+    );
 
     $orig->($self,$data,@args);
 };
@@ -54,7 +56,7 @@ MooseX::Storage::Engine::Trait::WithRoles - An engine trait to include roles in 
 
 =head1 VERSION
 
-version 0.0.1
+version 0.1.0
 
 =head1 AUTHOR
 
