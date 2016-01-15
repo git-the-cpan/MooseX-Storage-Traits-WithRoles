@@ -4,7 +4,7 @@
       "Yanick Champoux <yanick@babyl.dyndns.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.040, CPAN::Meta::Converter version 2.150001",
+   "generated_by" : "Dist::Zilla version 5.043, CPAN::Meta::Converter version 2.150001",
    "license" : [
       "perl_5"
    ],
@@ -64,15 +64,15 @@
    "provides" : {
       "MooseX::Storage::Base::SerializedClass" : {
          "file" : "lib/MooseX/Storage/Base/SerializedClass.pm",
-         "version" : "v0.1.0"
+         "version" : "v0.2.0"
       },
       "MooseX::Storage::Engine::Trait::WithRoles" : {
          "file" : "lib/MooseX/Storage/Engine/Trait/WithRoles.pm",
-         "version" : "v0.1.0"
+         "version" : "v0.2.0"
       },
       "MooseX::Storage::Traits::WithRoles" : {
          "file" : "lib/MooseX/Storage/Traits/WithRoles.pm",
-         "version" : "v0.1.0"
+         "version" : "v0.2.0"
       }
    },
    "release_status" : "stable",
@@ -87,7 +87,7 @@
          "web" : "https://github.com/yanick/MooseX-Storage-Traits-WithRoles"
       }
    },
-   "version" : "0.1.0",
+   "version" : "0.2.0",
    "x_author_pledge" : {
       "version" : 1
    },

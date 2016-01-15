@@ -4,7 +4,7 @@ MooseX::Storage::Traits::WithRoles - A custom trait to include roles in serializ
 
 # VERSION
 
-version 0.1.0
+version 0.2.0
 
 # SYNOPSIS
 

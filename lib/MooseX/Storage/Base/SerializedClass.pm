@@ -1,7 +1,7 @@
 package MooseX::Storage::Base::SerializedClass;
 our $AUTHORITY = 'cpan:YANICK';
 # ABSTRACT: Deserialize according to the serialized __CLASS__
-$MooseX::Storage::Base::SerializedClass::VERSION = '0.1.0';
+$MooseX::Storage::Base::SerializedClass::VERSION = '0.2.0';
 
 use parent 'Exporter';
 
@@ -62,7 +62,7 @@ MooseX::Storage::Base::SerializedClass - Deserialize according to the serialized
 
 =head1 VERSION
 
-version 0.1.0
+version 0.2.0
 
 =head1 SYNOPSIS
 

@@ -18,7 +18,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: '0'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.040, CPAN::Meta::Converter version 2.150001'
+generated_by: 'Dist::Zilla version 5.043, CPAN::Meta::Converter version 2.150001'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -27,13 +27,13 @@ name: MooseX-Storage-Traits-WithRoles
 provides:
   MooseX::Storage::Base::SerializedClass:
     file: lib/MooseX/Storage/Base/SerializedClass.pm
-    version: v0.1.0
+    version: v0.2.0
   MooseX::Storage::Engine::Trait::WithRoles:
     file: lib/MooseX/Storage/Engine/Trait/WithRoles.pm
-    version: v0.1.0
+    version: v0.2.0
   MooseX::Storage::Traits::WithRoles:
     file: lib/MooseX/Storage/Traits/WithRoles.pm
-    version: v0.1.0
+    version: v0.2.0
 requires:
   Class::Load: '0'
   Exporter: '0'
@@ -48,7 +48,7 @@ resources:
   bugtracker: https://github.com/yanick/MooseX-Storage-Traits-WithRoles/issues
   homepage: https://github.com/yanick/MooseX-Storage-Traits-WithRoles
   repository: https://github.com/yanick/MooseX-Storage-Traits-WithRoles.git
-version: 0.1.0
+version: 0.2.0
 x_author_pledge:
   version: 1
 x_authority: cpan:YANICK

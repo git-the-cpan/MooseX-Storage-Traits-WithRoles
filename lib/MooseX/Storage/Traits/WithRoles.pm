@@ -1,7 +1,7 @@
 package MooseX::Storage::Traits::WithRoles;
 our $AUTHORITY = 'cpan:YANICK';
 # ABSTRACT: A custom trait to include roles in serialization
-$MooseX::Storage::Traits::WithRoles::VERSION = '0.1.0';
+$MooseX::Storage::Traits::WithRoles::VERSION = '0.2.0';
 use Moose::Role;
 use namespace::autoclean;
 
@@ -44,7 +44,7 @@ MooseX::Storage::Traits::WithRoles - A custom trait to include roles in serializ
 
 =head1 VERSION
 
-version 0.1.0
+version 0.2.0
 
 =head1 SYNOPSIS
 
